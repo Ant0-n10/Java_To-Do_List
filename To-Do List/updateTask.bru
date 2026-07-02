@@ -1,0 +1,23 @@
+meta {
+  name: updateTask
+  type: http
+  seq: 3
+}
+
+put {
+  url: http://localhost:8080/tasks/1
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "description": "Estudar Java e Spring Boot - Atualizado!",
+    "status": "IN_PROGRESS"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,22 @@
+meta {
+  name: createTask
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://localhost:8080/tasks
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "description": "Minha primeira tarefa no Spring Boot!"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

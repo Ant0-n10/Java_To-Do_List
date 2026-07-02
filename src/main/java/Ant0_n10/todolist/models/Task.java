@@ -2,6 +2,7 @@ package Ant0_n10.todolist.models;
 
 import Ant0_n10.todolist.enumerations.StatusTask;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ public class Task {
     @Id
     private Long id;
 
+    @NotBlank(message = "A descrição da tarefa é obrigatória.")
     private String description;
 
     @Enumerated(EnumType.STRING)
